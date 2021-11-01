@@ -1,0 +1,140 @@
+#judul {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3em;
+    color: rgb(255, 255, 255);
+    border: 1px;
+	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+container {
+    width: 600px;
+    height: 150px;
+    opacity: 1.0;
+    display: block;
+    margin: 0 auto;
+    padding: 40px 40px;
+}
+
+#deftext{
+    color: white;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+#logincont {
+    width: 600px;
+    height: 150px;
+    background-color: #e23636;
+    opacity: 1.0;
+    display: block;
+    margin: 0 auto;
+    padding: 40px 40px;
+    /* padding-bottom: 40px; */
+    border: solid;
+    border-color:white;
+}
+
+#helpcont {
+    width: 600px;
+    height: 120px;
+    background-color: #e23636;
+    opacity: 1.0;
+    display: block;
+    margin: 0 auto;
+    padding: 40px 40px;
+    /* padding-bottom: 40px; */
+    border: solid;
+    border-color:white;
+}
+
+#aboutcont {
+    width: 600px;
+    height: 200px;
+    background-color: #e23636;
+    opacity: 1.0;
+    display: block;
+    margin: 0 auto;
+    padding: 40px 40px;
+    /* padding-bottom: 40px; */
+    border: solid;
+    border-color:white;
+}
+
+.yellowbutton {
+    background-color: #e23636;
+    border: solid;
+    color: white;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+button#black:hover, button#black:active {
+    background-color: #00308f;
+    border: solid;
+    color: white;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+.ON {
+    background-color: black;
+    border: 1;
+    border-color: teal;
+    color: white;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+button#ON:hover, button#ON:active {
+    background-color: teal;
+    color: black;
+    padding: 0px 0px;
+    text-align: center; 
+    text-decoration: none;
+    display: block;
+}
+.OFF {
+    background-color: black;
+    border: 1;
+    border-color: darkorange;
+    color: white;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+button#OFF:hover, button#OFF:active {
+    background-color: darkorange;
+    color: black;
+    padding: 0px 0px;
+    text-align: center; 
+    text-decoration: none;
+    display: block;
+    border: 0px;
+}
+
+table#full{
+    background-color: #00308f;
+    color: white;
+    padding: 0px 0px;
+    width: 100%;
+    text-align: center; 
+    text-decoration: none;
+    display: block;
+    border: 1px;
+    border-color: #e23636;
+}
