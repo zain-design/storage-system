@@ -4,7 +4,7 @@
             header("location:admin.php");
         }
         if($_SESSION["type"] == "user"){
-            header("location:.php");
+            header("location:dashboard.php");
         }
     }
     else{
