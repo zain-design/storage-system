@@ -45,6 +45,14 @@
         public function read_user($username, $type){
             $query = "SELECT * FROM users";
 
+            if (($username != "") && ($type != "")){
+                $query = $query . " WHERE username = '" . $username . "' AND type ='" . $type . "'";
+            } else if ($username =! ""){ 
+                $query = $query . " WHERE username = '" . $username . "'";
+            } else if ($type != ""){
+                $query = $query . " WHERE type = '" . $type . "'";
+            }
+
         }
 
         // UPDATE self
@@ -61,5 +69,29 @@
         // DELETE user
         public function delete_user($username){
             $query = "DELETE FROM users WHERE username ='" . $username . "'";
+        }
+
+        // CREATE item
+        public function create_item($barcode, $item_name, $item_qty){
+            $query = "INSERT INTO items VALUES ('" . $barcode . "','" . $item_name . "','" . $item_qty . "'";
+        }
+
+        // READ items
+        public function read_items($search){
+            $query = "SELECT * FROM items WHERE barcode LIKE '%" . $search . "%' OR item_name LIKE '%" . $search . "%' OR item_qty = '" . $search . "'";
+        }
+
+        // UPDATE items
+        public function update_item_details($barcode, $item_name, $old_barcode){
+            $query = "UPDATE items SET barcode = '" . $barcode . "', item_name = '" . $item_name . "' WHERE barcode = '" . $old_barcode . "'";
+        }
+
+        public function update_item_qty($barcode, $item_qty){
+            $query = "UPDATE items SET item_qty = " . $item_qty . " WHERE barcode = '" . $barcode . "'";
+        }
+
+        // DELETE item
+        public function delete_item($barcode){
+            $query = "DELETE FROM items WHERE barcode ='" . $barcode . "'";
         }
     }
