@@ -1,12 +1,15 @@
 <?php
 	session_start();
-	$connection = array("localhost","root","","storage_system");
+	$conn_host = "localhost";
+	$conn_username = "root";
+	$conn_password = "";
+	$conn_database = "storage_system";
 
 	class Database{
-		private $host = $connection[0];
-		private $user = $connection[1];
-		private $pass = $connection[2];
-		private $db = $connection[3];
+		private $host = "localhost";
+		private $user = "root";
+		private $pass = "";
+		private $db = "storage_system";
 		public $conn;
 		
 		public function connect() {
@@ -17,5 +20,5 @@
 			return $this->conn;
 		}
 	}
-	$connect= mysqli_connect($connection[0],$connection[1],$connection[2],$connection[3]);
+	$connect= mysqli_connect("localhost","root","","storage_system");
 ?>
