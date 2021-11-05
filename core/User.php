@@ -39,6 +39,7 @@
         // CREATE user
         public function register_user($username, $password, $type){
             $query = "INSERT INTO petugas VALUES ('" . $username . "', MD5('" . $password . "'), '" . $type . "')";
+            $result = $this->usrcon->query($query) or die($this->usrcon->error);
         }
 
         // READ user(s)
@@ -52,6 +53,7 @@
             } else if ($type != ""){
                 $query = $query . " WHERE type = '" . $type . "'";
             }
+            $result = $this->usrcon->query($query) or die($this->usrcon->error);
 
         }
 
@@ -63,35 +65,43 @@
             else{
                 $query = "UPDATE users SET username = '" . $username . "' WHERE username = '" . $old_username . "'";
             }
+            $result = $this->usrcon->query($query) or die($this->usrcon->error);
             
         }
 
         // DELETE user
         public function delete_user($username){
             $query = "DELETE FROM users WHERE username ='" . $username . "'";
+            $result = $this->usrcon->query($query) or die($this->usrcon->error);
         }
 
         // CREATE item
         public function create_item($barcode, $item_name, $item_qty){
             $query = "INSERT INTO items VALUES ('" . $barcode . "','" . $item_name . "','" . $item_qty . "'";
+            $result = $this->usrcon->query($query) or die($this->usrcon->error);
         }
 
         // READ items
         public function read_items($search){
             $query = "SELECT * FROM items WHERE barcode LIKE '%" . $search . "%' OR item_name LIKE '%" . $search . "%' OR item_qty = '" . $search . "'";
+            $result = $this->usrcon->query($query) or die($this->usrcon->error);
         }
 
         // UPDATE items
         public function update_item_details($barcode, $item_name, $old_barcode){
             $query = "UPDATE items SET barcode = '" . $barcode . "', item_name = '" . $item_name . "' WHERE barcode = '" . $old_barcode . "'";
+            $result = $this->usrcon->query($query) or die($this->usrcon->error);
         }
 
         public function update_item_qty($barcode, $item_qty){
             $query = "UPDATE items SET item_qty = " . $item_qty . " WHERE barcode = '" . $barcode . "'";
+            $result = $this->usrcon->query($query) or die($this->usrcon->error);
         }
 
         // DELETE item
         public function delete_item($barcode){
             $query = "DELETE FROM items WHERE barcode ='" . $barcode . "'";
+            $result = $this->usrcon->query($query) or die($this->usrcon->error);
         }
+
     }
